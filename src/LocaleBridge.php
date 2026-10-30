@@ -124,7 +124,7 @@ PHP,
 
 			$definitions = (self::$langs[$code] ?? self::$langs[$fallbackLang])->getAll();
 			$definitions = array_merge(self::$langs[$fallbackLang]->getAll(), $definitions);
-			self::$langs[$code] ??= $lang;
+			self::$langs[$code] = $lang;
 
 			unset($definitions[Keys::LANGUAGE_NAME]);
 
